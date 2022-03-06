@@ -1,7 +1,7 @@
 import { Box } from "@mui/system";
-import BlogIcon from "../../../../assets/blog.svg";
-import LaptopIcon from "../../../../assets/laptop.svg";
-import CoffeeIcon from "../../../../assets/coffee.svg";
+import BlogIcon from "../../../assets/blog.svg";
+import LaptopIcon from "../../../assets/laptop.svg";
+import CoffeeIcon from "../../../assets/coffee.svg";
 
 const Navbar = () => {
   return (
