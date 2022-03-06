@@ -19,9 +19,9 @@ const Landing = () => {
         <TextSlide delay={8}>
           <Typography
             variant='h2'
-            sx={{ color: "primary.contrastText", fontSize: { md: "6rem" } }}
+            sx={{ color: "text.primary", fontSize: { md: "6rem" } }}
           >
-            Here is a test of github actions
+            I'm <b>Neeraj</b>, a developer based in Melbourne
           </Typography>
         </TextSlide>
         <Box
@@ -33,7 +33,7 @@ const Landing = () => {
         >
           <Divider
             sx={{
-              borderColor: "primary.contrastText",
+              borderColor: "text.primary",
               width: {
                 xs: "40%",
                 md: "40%",

@@ -1,22 +1,30 @@
 import { Box } from "@mui/system";
+import React from "react";
 
 interface IconLinkProps {
-  iconUrl: string;
+  children: React.ReactNode;
+  iconUrl?: string;
+  alt: string;
 }
 
 const IconLink = (props: IconLinkProps) => {
   return (
     <Box
-      component='img'
-      sx={{
-        height: 50,
-        width: 50,
-        maxHeight: { xs: 50 },
-        maxWidth: { xs: 50 },
-      }}
-      alt='Link to my projects'
-      src={props.iconUrl}
-    />
+      sx={[
+        {
+          svg: {
+            height: { xs: "2.75rem", md: "3rem", lg: "4rem" },
+            width: "auto",
+          },
+        },
+        (theme) => ({
+          "&:hover": { path: { fill: theme.palette.secondary.main } },
+        }),
+      ]}
+      // alt={props.alt}
+    >
+      {props.children}
+    </Box>
   );
 };
 
