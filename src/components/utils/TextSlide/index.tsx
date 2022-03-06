@@ -23,10 +23,12 @@ const TextSlide = (props: TextSlideProps) => {
   const delayInterval = 100;
 
   const handleChange = () => {
-    setTimeout(
-      () => setRevealed((prev) => !prev),
-      props.delay! * delayInterval
-    );
+    if (!revealed) {
+      setTimeout(
+        () => setRevealed((prev) => !prev),
+        props.delay! * delayInterval
+      );
+    }
   };
   return (
     <Box>

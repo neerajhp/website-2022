@@ -1,7 +1,8 @@
 import { Box } from "@mui/system";
-import BlogIcon from "../../../assets/blog.svg";
-import LaptopIcon from "../../../assets/laptop.svg";
-import CoffeeIcon from "../../../assets/coffee.svg";
+import IconLink from "../../utils/IconLink";
+import { ReactComponent as LaptopIcon } from "../../../assets/laptop.svg";
+import { ReactComponent as CoffeeIcon } from "../../../assets/coffee.svg";
+import { ReactComponent as BlogIcon } from "../../../assets/blog.svg";
 
 const Navbar = () => {
   return (
@@ -24,39 +25,15 @@ const Navbar = () => {
           justifyContent: "space-around",
         }}
       >
-        <Box
-          component='img'
-          sx={{
-            height: 50,
-            width: 50,
-            maxHeight: { xs: 50 },
-            maxWidth: { xs: 50 },
-          }}
-          alt='Link to my projects'
-          src={LaptopIcon}
-        />
-        <Box
-          component='img'
-          sx={{
-            height: 50,
-            width: 50,
-            maxHeight: { xs: 50 },
-            maxWidth: { xs: 50 },
-          }}
-          alt='Link to my projects'
-          src={BlogIcon}
-        />
-        <Box
-          component='img'
-          sx={{
-            height: 50,
-            width: 50,
-            maxHeight: { xs: 50 },
-            maxWidth: { xs: 50 },
-          }}
-          alt='Link to my projects'
-          src={CoffeeIcon}
-        />
+        <IconLink alt='Link to my projects'>
+          <LaptopIcon />
+        </IconLink>
+        <IconLink alt='Link to my articles'>
+          <BlogIcon />
+        </IconLink>
+        <IconLink alt='Link to my contact details'>
+          <CoffeeIcon />
+        </IconLink>
       </Box>
     </Box>
   );

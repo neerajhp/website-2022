@@ -1,17 +1,16 @@
 import createTheme from "@mui/material/styles/createTheme";
-import { red } from "@mui/material/colors";
 
 const theme: any = createTheme({
-  status: {
-    danger: red[500],
-  },
   palette: {
-    primary: {
+    neutral: {
       main: "#F0F1F2",
-      contrastText: "#000000",
     },
     secondary: {
       main: "#EE8E46",
+    },
+    text: {
+      primary: "#000000",
+      light: "#828282",
     },
   },
 });
