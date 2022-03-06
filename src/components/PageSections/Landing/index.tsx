@@ -1,13 +1,11 @@
 import { Divider, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import Navbar from "./Navbar";
 import PixelMe from "../../../assets/pixelme.png";
 import TextSlide from "../../utils/TextSlide";
 
 const Landing = () => {
   return (
-    <Box sx={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
-      <Navbar />
+    <Box sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}>
       <Box sx={{ flexGrow: 1 }}>
         <TextSlide>
           <Typography
