@@ -21,7 +21,7 @@ const Landing = () => {
             variant='h2'
             sx={{ color: "primary.contrastText", fontSize: { md: "6rem" } }}
           >
-            I'm <b>Neeraj</b>, a developer based in Melbourne
+            Here is a test of github actions
           </Typography>
         </TextSlide>
         <Box
