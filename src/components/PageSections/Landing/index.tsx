@@ -1,6 +1,5 @@
 import { Divider, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import PixelMe from "../../../assets/pixelme.png";
 import TextSlide from "../../utils/TextSlide";
 
 const Landing = () => {

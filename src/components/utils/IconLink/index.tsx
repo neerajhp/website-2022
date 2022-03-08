@@ -19,12 +19,17 @@ const IconLink = (props: IconLinkProps) => {
           },
         },
         (theme) => ({
-          "&:hover": { path: { fill: theme.palette.secondary.main } },
+          "&:hover": {
+            path: {
+              fill: theme.palette.secondary.main,
+              stroke: theme.palette.secondary.main,
+            },
+          },
         }),
       ]}
       // alt={props.alt}
     >
-      <a href={props.href} target='_blank'>
+      <a href={props.href} target='_blank' rel='noreferrer'>
         {props.children}
       </a>
     </Box>
