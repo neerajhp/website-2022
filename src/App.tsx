@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "@mui/material";
+import PageBackground from "./components/PageBackground";
+
+import Navbar from "./components/PageSections/Navbar";
+import Contact from "./components/PageSections/Contact";
+import Landing from "./components/PageSections/Landing";
+
+import Footer from "./components/PageSections/Footer";
+import theme from "./Theme";
+import { Box } from "@mui/system";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ThemeProvider theme={theme}>
+      <PageBackground>
+        <Box
+          sx={{
+            minHeight: { xs: "70vh", md: "100vh", xl: "80vh" },
+            display: "flex",
+            flexDirection: "column",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Navbar />
+          <Landing />
+        </Box>
+
+        <Contact />
+        <Box sx={{ position: "absolute", left: 0, right: 0 }}>
+          <Footer />
+        </Box>
+      </PageBackground>
+    </ThemeProvider>
   );
 }
 
