@@ -15,7 +15,7 @@ const Footer = () => {
         }}
       >
         <Typography variant='body1'>
-          Made with <span>❤️</span>
+          (Being) Made with <span>❤️</span>
         </Typography>
         <Typography variant='body1'>2022</Typography>
       </Box>

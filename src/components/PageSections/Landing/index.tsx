@@ -33,7 +33,7 @@ const Landing = () => {
         >
           <Divider
             sx={{
-              borderColor: "text.primary",
+              borderColor: "text.light",
               width: {
                 xs: "40%",
                 md: "40%",
@@ -42,22 +42,6 @@ const Landing = () => {
               },
             }}
           />
-          <Box
-            sx={{
-              height: {
-                xs: "8rem",
-                md: 48,
-                lg: 64,
-                xl: 64,
-              },
-            }}
-          >
-            <img
-              alt='Pixel Me'
-              src={PixelMe}
-              style={{ height: "100%", transform: "rotate(20deg)" }}
-            />
-          </Box>
         </Box>
       </Box>
     </Box>
