@@ -21,8 +21,8 @@ const Blog = () => {
     console.log(articles);
     Content = (
       <Box>
-        {articles.map((article) => (
-          <Article content={article}></Article>
+        {articles.map((article, idx) => (
+          <Article key={idx} content={article}></Article>
         ))}
       </Box>
     );

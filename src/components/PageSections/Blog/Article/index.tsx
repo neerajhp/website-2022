@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 
 interface ArticleType {
   author: string;
@@ -18,7 +18,23 @@ interface ArticleProps {
 }
 
 const Article = (props: ArticleProps) => {
-  return <Box>{props.content.title}</Box>;
+  return (
+    <Box
+      sx={{
+        "& a": { color: "inherit", textDecoration: "none" },
+        "&:hover": {
+          color: "secondary.main",
+          "& hr": { borderColor: "secondary.main" },
+        },
+      }}
+    >
+      <a href={props.content.link} target='_blank' rel='noreferrer'>
+        <Divider sx={{ width: "100%", color: "inherit" }} />
+
+        <Typography variant='h3'>{props.content.title}</Typography>
+      </a>
+    </Box>
+  );
 };
 
 export default Article;

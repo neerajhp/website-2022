@@ -5,6 +5,7 @@ interface IconLinkProps {
   children: React.ReactNode;
   iconUrl?: string;
   alt: string;
+  href: string;
 }
 
 const IconLink = (props: IconLinkProps) => {
@@ -28,7 +29,9 @@ const IconLink = (props: IconLinkProps) => {
       ]}
       // alt={props.alt}
     >
-      {props.children}
+      <a href={props.href} target='_blank' rel='noreferrer'>
+        {props.children}
+      </a>
     </Box>
   );
 };
