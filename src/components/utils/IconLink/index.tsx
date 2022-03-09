@@ -18,7 +18,12 @@ const IconLink = (props: IconLinkProps) => {
           },
         },
         (theme) => ({
-          "&:hover": { path: { fill: theme.palette.secondary.main } },
+          "&:hover": {
+            path: {
+              fill: theme.palette.secondary.main,
+              stroke: theme.palette.secondary.main,
+            },
+          },
         }),
       ]}
       // alt={props.alt}

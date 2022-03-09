@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Melodrama";
+  src: local("Melodrama"),
+    url(./fonts/Melodrama_Complete/Melodrama-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: local("Satoshi"),
+    url(./fonts/Satoshi_Complete/Satoshi-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "ClashGrotesk";
+  src: local("ClashGrotesk"),
+    url(./fonts/ClashGrotesk_Complete/ClashGrotesk-Medium.otf)
+      format("opentype");
+}
