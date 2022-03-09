@@ -1,39 +1,29 @@
 import { Box } from "@mui/system";
-import IconLink from "../../utils/IconLink";
-import { ReactComponent as LaptopIcon } from "../../../assets/laptop.svg";
-import { ReactComponent as CoffeeIcon } from "../../../assets/coffee.svg";
-import { ReactComponent as BlogIcon } from "../../../assets/blog.svg";
+import PixelMe from "../../../assets/pixelme.png";
 
 const Navbar = () => {
   return (
     <Box
       sx={{
+        color: "text.light",
         my: 8,
         display: "flex",
         justifyContent: "space-between",
         fontSize: 48,
       }}
     >
-      <Box>&lt;&gt;</Box>
+      <Box sx={{ display: { xs: "none", md: "flex" } }}>&lt; &gt;</Box>
       <Box
         sx={{
-          width: {
-            md: "30%",
-            lg: "20%",
+          height: {
+            xs: "8rem",
+            md: 48,
+            lg: 64,
+            xl: 64,
           },
-          display: { xs: "none", md: "flex" },
-          justifyContent: "space-around",
         }}
       >
-        <IconLink alt='Link to my projects'>
-          <LaptopIcon />
-        </IconLink>
-        <IconLink alt='Link to my articles'>
-          <BlogIcon />
-        </IconLink>
-        <IconLink alt='Link to my contact details'>
-          <CoffeeIcon />
-        </IconLink>
+        <img alt='Pixel Me' src={PixelMe} style={{ height: "100%" }} />{" "}
       </Box>
     </Box>
   );
