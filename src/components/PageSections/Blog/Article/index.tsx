@@ -22,26 +22,32 @@ const Article = (props: ArticleProps) => {
   return (
     <Box
       sx={{
-        height: { xs: 50, md: 100 },
+        height: { xs: "auto", md: 100 },
         p: { xs: 1, md: 2 },
         "& h3": {
           pl: 0.5,
           pt: 0.5,
         },
         "& a": { color: "inherit", textDecoration: "none" },
+
         "&:hover": {
           color: "secondary.main",
           "& hr": { borderColor: "secondary.main" },
           "& h3": {
-            pl: 0,
-            pt: 0,
+            pl: 0, // animate the text on hover
+            pt: 0, // animate the text on hover
           },
         },
       }}
     >
       <a href={props.content.link} target='_blank' rel='noreferrer'>
         <TextSlide divider={true}>
-          <Typography variant='h3'>{props.content.title}</Typography>
+          <Typography
+            variant='h3'
+            sx={{ fontSize: { xs: "1.5rem", md: "3rem" } }}
+          >
+            {props.content.title}
+          </Typography>
         </TextSlide>
       </a>
     </Box>

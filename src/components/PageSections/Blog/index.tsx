@@ -20,11 +20,11 @@ const Blog = () => {
   if (articles.length > 0) {
     console.log(articles);
     Content = (
-      <Box sx={{ display: "flex", flexDirection: "row" }}>
+      <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" } }}>
         <Box sx={{ flexGrow: 1, color: "text.light" }}>
           <Typography variant='h4'>My Blog</Typography>
         </Box>
-        <Box sx={{ width: { md: "70%" } }}>
+        <Box sx={{ p: { xs: 2 }, width: { md: "70%" } }}>
           {articles.map((article, idx) => (
             <Article key={idx} content={article}></Article>
           ))}
