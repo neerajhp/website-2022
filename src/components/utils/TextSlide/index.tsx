@@ -1,6 +1,6 @@
 import React from "react";
 import { Waypoint } from "react-waypoint";
-import { Slide, Fade } from "@mui/material";
+import { Slide, Fade, Collapse, Grow, Divider } from "@mui/material";
 import { Box } from "@mui/system";
 
 interface TextSlideRequiredProps {
@@ -9,17 +9,19 @@ interface TextSlideRequiredProps {
 
 interface TextSlideOptionalProps {
   delay?: number;
+  divider?: boolean;
 }
 
 interface TextSlideProps
   extends TextSlideRequiredProps,
     TextSlideOptionalProps {}
 
-const defaultProps: TextSlideOptionalProps = { delay: 0 };
+const defaultProps: TextSlideOptionalProps = { delay: 0, divider: false };
 
 const TextSlide = (props: TextSlideProps) => {
   const [revealed, setRevealed] = React.useState(false);
   const containerRef = React.useRef(null);
+
   const delayInterval = 100;
 
   const handleChange = () => {
@@ -33,6 +35,17 @@ const TextSlide = (props: TextSlideProps) => {
   return (
     <Box>
       <Waypoint onEnter={handleChange} />
+
+      {props.divider && (
+        <Grow
+          in={revealed}
+          style={{ transformOrigin: "0", opacity: 1 }}
+          {...(revealed ? { timeout: 500 } : {})}
+        >
+          <Divider sx={{ width: "100%", color: "inherit" }} />
+        </Grow>
+      )}
+
       <Fade in={revealed} timeout={1200}>
         <Box sx={{ overflow: "hidden" }} ref={containerRef}>
           <Slide

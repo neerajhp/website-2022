@@ -1,4 +1,5 @@
 import { Box, Divider, Typography } from "@mui/material";
+import TextSlide from "../../../utils/TextSlide";
 
 interface ArticleType {
   author: string;
@@ -21,17 +22,27 @@ const Article = (props: ArticleProps) => {
   return (
     <Box
       sx={{
+        height: { xs: 50, md: 100 },
+        p: { xs: 1, md: 2 },
+        "& h3": {
+          pl: 0.5,
+          pt: 0.5,
+        },
         "& a": { color: "inherit", textDecoration: "none" },
         "&:hover": {
           color: "secondary.main",
           "& hr": { borderColor: "secondary.main" },
+          "& h3": {
+            pl: 0,
+            pt: 0,
+          },
         },
       }}
     >
       <a href={props.content.link} target='_blank' rel='noreferrer'>
-        <Divider sx={{ width: "100%", color: "inherit" }} />
-
-        <Typography variant='h3'>{props.content.title}</Typography>
+        <TextSlide divider={true}>
+          <Typography variant='h3'>{props.content.title}</Typography>
+        </TextSlide>
       </a>
     </Box>
   );

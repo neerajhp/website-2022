@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
 import service from "./service";
 import Article from "./Article";
@@ -20,10 +20,15 @@ const Blog = () => {
   if (articles.length > 0) {
     console.log(articles);
     Content = (
-      <Box>
-        {articles.map((article, idx) => (
-          <Article key={idx} content={article}></Article>
-        ))}
+      <Box sx={{ display: "flex", flexDirection: "row" }}>
+        <Box sx={{ flexGrow: 1, color: "text.light" }}>
+          <Typography variant='h4'>My Blog</Typography>
+        </Box>
+        <Box sx={{ width: { md: "70%" } }}>
+          {articles.map((article, idx) => (
+            <Article key={idx} content={article}></Article>
+          ))}
+        </Box>
       </Box>
     );
   }
